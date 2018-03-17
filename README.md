@@ -1,4 +1,5 @@
 # Shared design demo
+[![npm version](https://badge.fury.io/js/%40tallang%2Fshared-design-demo.svg)](https://badge.fury.io/js/%40tallang%2Fshared-design-demo)
 
 This package works as a demo to illustrate how to share typography and colors through SASS mixins:
 
