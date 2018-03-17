@@ -1,0 +1,33 @@
+// Colors
+$calm-blue: #2196F3;
+$calm-blue-75: transparentize($calm-blue, .25);
+$calm-blue-50: transparentize($calm-blue, .5);
+
+$teal: #009688;
+$teal-75: transparentize($teal, .25);
+$teal-50: transparentize($teal, .5);
+
+$lime: #CDDC39;
+$lime-75: transparentize($lime, .25);
+$lime-50: transparentize($lime, .5);
+
+$amber: #FFC107;
+$amber-75: transparentize($amber, .25);
+$amber-50: transparentize($amber, .5);
+
+$red: #D32F2F;
+$red-75: transparentize($red, .25);
+$red-50: transparentize($red, .5);
+
+// Greys
+$dark-grey: #282828;
+$dark-grey-75: transparentize($dark-grey, .25);
+$dark-grey-50: transparentize($dark-grey, .5);
+
+$grey: #8c8c8c;
+$grey-75: transparentize($grey, .25);
+$grey-50: transparentize($grey, .5);
+
+$light-grey: #dedede;
+$light-grey-75: transparentize($light-grey, .25);
+$light-grey-50: transparentize($light-grey, .5);
