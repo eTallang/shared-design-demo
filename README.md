@@ -1,60 +1,53 @@
-# Fortum AngularDesign
+# Shared design demo
 
-This package provides the Fortum typography config, Fortum palette through SCSS-variables, and offers the same palette as prebuilt Material Design colors. The package can be used in any .scss-file by importing:
-`@import '~@fortum/angular-design/theme';`
+This package works as a demo to illustrate how to share typography and colors through SASS mixins:
 
 # Colors
 The colors and their SASS-names are provided below.
 ## Colors
-- ![#5AC37D](https://placehold.it/15/5AC37D/000000?text=+) #5AC37D: `$optimistic-green`
-- ![#377A6C](https://placehold.it/15/377A6C/000000?text=+) #377A6C: `$green`
-- ![#78A0D4](https://placehold.it/15/78A0D4/000000?text=+) #78A0D4: `$water-blue`
-- ![#EB6437](https://placehold.it/15/EB6437/000000?text=+) #EB6437: `$energetic-orange`
-- ![#F5E150](https://placehold.it/15/F5E150/000000?text=+) #F5E150: `$solar-yellow`
-- ![#D25564](https://placehold.it/15/D25564/000000?text=+) #D25564: `$power-red`
-- ![#B9B4AA](https://placehold.it/15/B9B4AA/000000?text=+) #B9B4AA: `$sustainable-grey`
-- ![#78DEC8](https://placehold.it/15/78DEC8/000000?text=+) #78DEC8: `$electric-grey`
+- ![#2196F3](https://placehold.it/15/2196F3/000000?text=+) #2196F3: `$calm-blue`
+- ![#009688](https://placehold.it/15/009688/000000?text=+) #009688: `$teal`
+- ![#CDDC39](https://placehold.it/15/CDDC39/000000?text=+) #CDDC39: `$lime`
+- ![#FFC107](https://placehold.it/15/FFC107/000000?text=+) #FFC107: `$amber`
+- ![#D32F2F](https://placehold.it/15/D32F2F/000000?text=+) #D32F2F: `$red`
 
 ## Black, white and greys
-- ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) #ffffff: `$white`
-- ![#000000](https://placehold.it/15/000000/000000?text=+) #000000: `$black`
-- ![#4A4A4A](https://placehold.it/15/4A4A4A/000000?text=+) #4A4A4A: `$dark-grey`
-- ![#9B9B9B](https://placehold.it/15/9B9B9B/000000?text=+) #9B9B9B: `$grey`
-- ![#D5D5D5](https://placehold.it/15/D5D5D5/000000?text=+) #D5D5D5: `$light-grey`
+- ![#282828](https://placehold.it/15/282828/000000?text=+) #282828: `$dark-grey`
+- ![#8c8c8c](https://placehold.it/15/8c8c8c/000000?text=+) #8c8c8c: `$grey`
+- ![#dedede](https://placehold.it/15/dedede/000000?text=+) #dedede: `$light-grey`
 
  All of the provided colors are available in three shades. They can be used by postfixing the SASS-name with `-75` or `-50`. This will give the color an opacity of 75% or 50%, depending on your choice. An example is given below:
  ```
- background: $optimistic-green;
- color: $optimistic-green-75;
- border-color: $optimistic-green-50;
+ background: $calm-blue;
+ color: $calm-blue-75;
+ border-color: $calm-blue-50;
  ```
-There exists a single exception to this rule, as the `$water-blue` also has a darker version. This is named `$water-blue-dark`.
 
 # Material Design Colors
-If using e.g. `@angular/material`, this package provides prebuilt primary, accent and warn colors. These variables are named
-- `$fortum-primary`
-- `$fortum-accent`
-- `$fortum-warn`
+If you're using `@angular/material`, this package provides prebuilt primary, accent and warn colors. These variables are named
+- `$demo-primary`
+- `$demo-accent`
+- `$demo-warn`
 
 They can be used when configuring the `@angular/material` palette:
 ```
 @import '~@angular/material/theming';
-@import '~@fortum/angular-design/theme';
+@import '~@tallang/shared-design-demo/theme';
 
 @include mat-core();
-$primary-color:  mat-palette($fortum-primary, 600, 400, 800);
-$accent-color:   mat-palette($fortum-accent, 600, 400, 800);
-$warn-color:     mat-palette($fortum-warn);
+$primary-color:  mat-palette($demo-primary);
+$accent-color:   mat-palette($demo-accent);
+$warn-color:     mat-palette($demo-warn);
 $theme:          mat-light-theme($primary-color, $accent-color, $warn-color);
 
 @include angular-material-theme($theme);
 ```
 
 # Fortum typography
-The Fortum typography is implemented as a SASS mixin, and can be used by including it in your styles:
+The typography configuration is implemented as a SASS mixin, and can be used by including it in your styles:
 ```
-@import '~@fortum/angular-design/theme';
+@import '~@tallang/shared-design-demo/theme';
 
-@include fortum-typography();
+@include demo-typography();
 ```
-The `fortum-typography` mixin includes `color`, `font-size`, `font-weight`, `line-height`, `margin` and alignment for all common HTML text elements (h1, h2, h3, h4, h5, p, a, b, strong, i, em, mark, del, ins). It also sets the global font family to `GT Eesti Pro Display` with a fallback to Arial and sans-serif if `GT Eesti Pro Display` is not available.
+The `demo-typography` mixin includes `color`, `font-size`, `font-weight`, `line-height`, `margin` and alignment for all common HTML text elements (h1, h2, p, b, strong, i, em, mark, del, ins). It also sets the global font family to `Montserrat` with a fallback to sans-serif if `Montserrat` is not available.
