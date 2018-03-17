@@ -8,13 +8,11 @@ The colors and their SASS-names are provided below.
 ## Colors
 - ![#2196F3](https://placehold.it/15/2196F3/000000?text=+) #2196F3: `$calm-blue`
 - ![#009688](https://placehold.it/15/009688/000000?text=+) #009688: `$teal`
-- ![#CDDC39](https://placehold.it/15/CDDC39/000000?text=+) #CDDC39: `$lime`
 - ![#FFC107](https://placehold.it/15/FFC107/000000?text=+) #FFC107: `$amber`
 - ![#D32F2F](https://placehold.it/15/D32F2F/000000?text=+) #D32F2F: `$red`
 
 ## Greys
 - ![#282828](https://placehold.it/15/282828/000000?text=+) #282828: `$dark-grey`
-- ![#8c8c8c](https://placehold.it/15/8c8c8c/000000?text=+) #8c8c8c: `$grey`
 - ![#dedede](https://placehold.it/15/dedede/000000?text=+) #dedede: `$light-grey`
 
  All of the provided colors are available in three shades. They can be used by postfixing the SASS-name with `-75` or `-50`. This will give the color an opacity of 75% or 50%, depending on your choice. An example is given below:
