@@ -1,6 +1,6 @@
 {
   "name": "@tallang/shared-design-demo",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A demo repository to illustrate how to share palette and typography through NPM",
   "license": "MIT",
   "private": false,
