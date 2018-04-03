@@ -42,7 +42,7 @@ $theme:          mat-light-theme($primary-color, $accent-color, $warn-color);
 @include angular-material-theme($theme);
 ```
 
-# Fortum typography
+# Shared typography
 The typography configuration is implemented as a SASS mixin, and can be used by including it in your styles:
 ```
 @import '~@tallang/shared-design-demo/theme';
